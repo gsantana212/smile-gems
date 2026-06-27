@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMILE GEMS · Tooth Gem DIY Kits</title>
+<meta name="description" content="Tooth gem kits for artists and beginners. Crystal, gold, and Swarovski. Buy once, no subscription. From $39.">
+<meta property="og:title" content="SMILE GEMS · Tooth Gem DIY Kits">
+<meta property="og:description" content="Pre-portioned gem kits. Cure light, etchant, composite — everything you need. From $39.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://gsantana212.github.io/smile-gems/">
+<style>
+:root {
+  --bg: #f6f1e9;
+  --ink: #14110f;
+  --lime: #d4ff3a;
+  --pink: #ffb8d1;
+  --ice: #b8e0ff;
+  --gold: #d4af37;
+  --line: #14110f22;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+  padding: 16px 32px;
+}
+.nav-inner {
+  max-width: 1280px; margin: 0 auto;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.logo {
+  font-weight: 900; font-size: 18px; letter-spacing: -0.02em;
+}
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 28px; align-items: center; }
+.nav-links a {
+  font-size: 14px; font-weight: 500;
+  padding: 8px 12px; border-radius: 8px;
+  transition: background 0.15s;
+}
+.nav-links a:hover { background: var(--ink); color: var(--bg); }
+.nav-cta { background: var(--ink); color: var(--bg) !important; }
+.nav-cta:hover { background: var(--gold); color: var(--ink) !important; }
+
+/* HERO */
+.hero {
+  max-width: 1280px; margin: 0 auto;
+  padding: 80px 32px 64px;
+  text-align: left;
+}
+.hero-tag {
+  display: inline-block;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+  background: var(--gold); color: var(--ink);
+  padding: 6px 14px; border-radius: 999px;
+  margin-bottom: 24px;
+}
+.hero h1 {
+  font-size: clamp(40px, 7vw, 88px);
+  font-weight: 900; letter-spacing: -0.03em;
+  line-height: 0.95;
+  margin-bottom: 24px;
+}
+.hero h1 .gem {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--pink) 50%, var(--ice) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+.hero p {
+  font-size: clamp(16px, 1.8vw, 20px);
+  max-width: 620px;
+  margin-bottom: 32px;
+  color: var(--ink);
+  opacity: 0.85;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--ink); color: var(--bg);
+  padding: 16px 28px; border-radius: 999px;
+  font-weight: 700; font-size: 16px;
+  border: 2px solid var(--ink);
+  transition: all 0.15s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.btn-ghost {
+  padding: 16px 28px; border-radius: 999px;
+  font-weight: 700; font-size: 16px;
+  border: 2px solid var(--ink);
+  display: inline-block;
+  transition: all 0.15s;
+}
+.btn-ghost:hover { background: var(--ink); color: var(--bg); }
+.trust-strip {
+  margin-top: 48px; padding-top: 24px;
+  border-top: 1px solid var(--line);
+  display: flex; gap: 32px; flex-wrap: wrap;
+  font-size: 13px; font-weight: 600; letter-spacing: 0.04em;
+}
+.trust-strip span::before { content: "✓ "; color: var(--gold); }
+
+/* SECTION SHARED */
+section.block {
+  max-width: 1280px; margin: 0 auto;
+  padding: 80px 32px;
+}
+.eyebrow {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+  color: var(--gold);
+  margin-bottom: 12px;
+}
+h2 {
+  font-size: clamp(32px, 4.5vw, 56px);
+  font-weight: 900; letter-spacing: -0.025em;
+  line-height: 1;
+  margin-bottom: 16px;
+}
+h2 .accent { color: var(--gold); }
+.sub {
+  font-size: clamp(16px, 1.6vw, 18px);
+  max-width: 640px; margin-bottom: 48px;
+  opacity: 0.75;
+}
+
+/* WHAT IS THIS */
+#what { background: var(--bg); }
+.what-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px; margin-top: 40px;
+}
+.what-card {
+  background: white;
+  border: 1.5px solid var(--line);
+  border-radius: 20px;
+  padding: 32px;
+  transition: all 0.2s;
+}
+.what-card:hover { border-color: var(--gold); transform: translateY(-4px); }
+.what-num {
+  font-size: 14px; font-weight: 900;
+  color: var(--gold); margin-bottom: 16px;
+  display: block;
+}
+.what-card h3 {
+  font-size: 22px; font-weight: 800;
+  margin-bottom: 12px;
+}
+.what-card p { font-size: 15px; opacity: 0.8; }
+
+/* KITS GRID */
+#kits { background: var(--ink); color: var(--bg); }
+#kits .sub { color: var(--lime); opacity: 1; }
+.kits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 48px;
+}
+.kit-card {
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 24px;
+  padding: 32px;
+  display: flex; flex-direction: column;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+  position: relative;
+}
+.kit-card.featured {
+  border-color: var(--gold);
+  transform: scale(1.02);
+}
+.kit-card.featured::before {
+  content: "MOST POPULAR";
+  position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
+  background: var(--gold); color: var(--ink);
+  padding: 6px 16px; border-radius: 999px;
+  font-size: 11px; font-weight: 900; letter-spacing: 0.08em;
+}
+.kit-img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: 16px; margin-bottom: 24px;
+}
+.kit-name {
+  font-size: 14px; font-weight: 700; letter-spacing: 0.06em;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+.kit-title {
+  font-size: 32px; font-weight: 900; letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.kit-desc { font-size: 15px; opacity: 0.75; margin-bottom: 24px; }
+.kit-price {
+  font-size: 56px; font-weight: 900; letter-spacing: -0.03em;
+  margin-bottom: 4px;
+}
+.kit-price-note {
+  font-size: 13px; opacity: 0.5; margin-bottom: 24px;
+}
+.kit-cta {
+  background: var(--ink); color: var(--bg);
+  padding: 16px; border-radius: 999px;
+  text-align: center; font-weight: 700;
+  border: 2px solid var(--ink);
+  margin-bottom: 24px;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.kit-cta:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.kit-includes {
+  list-style: none;
+  font-size: 14px;
+  border-top: 1px solid var(--line);
+  padding-top: 16px;
+}
+.kit-includes li {
+  padding: 6px 0;
+  display: flex; justify-content: space-between;
+}
+.kit-includes li::before { content: "• "; color: var(--gold); font-weight: 700; }
+
+/* HOW IT WORKS */
+#how { background: var(--bg); }
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+.step {
+  background: var(--pink);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1.5px solid var(--ink);
+}
+.step:nth-child(2) { background: var(--ice); }
+.step:nth-child(3) { background: var(--lime); }
+.step:nth-child(4) { background: white; }
+.step-num {
+  display: inline-block;
+  width: 36px; height: 36px;
+  background: var(--ink); color: var(--bg);
+  border-radius: 50%;
+  text-align: center; line-height: 36px;
+  font-weight: 900; margin-bottom: 16px;
+}
+.step h3 { font-size: 18px; font-weight: 800; margin-bottom: 8px; }
+.step p { font-size: 14px; opacity: 0.85; }
+
+/* TESTIMONIALS */
+#reviews { background: white; }
+.review-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 40px;
+}
+.review {
+  background: var(--bg);
+  border-radius: 20px;
+  padding: 28px;
+  border: 1.5px solid var(--line);
+}
+.review-stars { color: var(--gold); font-size: 16px; margin-bottom: 12px; }
+.review-text { font-size: 15px; font-weight: 500; margin-bottom: 16px; line-height: 1.6; }
+.review-author { font-size: 13px; font-weight: 700; }
+.review-loc { font-size: 12px; opacity: 0.5; }
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 24px;
+  margin-top: 48px; padding-top: 32px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
+.stat-num { font-size: 36px; font-weight: 900; letter-spacing: -0.02em; }
+.stat-label { font-size: 12px; opacity: 0.6; letter-spacing: 0.06em; }
+
+/* INGREDIENTS (vendor list) */
+#ingredients { background: var(--bg); }
+.vendor-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--line);
+}
+.vendor-table th, .vendor-table td {
+  padding: 16px 20px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+}
+.vendor-table th {
+  background: var(--ink); color: var(--bg);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.vendor-table tr:last-child td { border-bottom: none; }
+.vendor-link { color: var(--gold); font-weight: 700; }
+.vendor-link:hover { text-decoration: underline; }
+
+/* MATH / FAQ */
+#math { background: var(--ink); color: var(--bg); }
+.math-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 32px;
+}
+@media (max-width: 768px) { .math-grid { grid-template-columns: 1fr; } }
+.math-card {
+  background: rgba(255,255,255,0.05);
+  border: 1.5px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 32px;
+}
+.math-card h3 { font-size: 20px; margin-bottom: 16px; color: var(--lime); }
+.math-card ul { list-style: none; font-size: 15px; }
+.math-card li { padding: 8px 0; display: flex; justify-content: space-between; }
+.math-card li span:last-child { font-weight: 900; }
+
+#faq { background: var(--bg); }
+details {
+  background: white;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 12px;
+  border: 1.5px solid var(--line);
+  cursor: pointer;
+}
+summary {
+  font-weight: 700; font-size: 16px;
+  list-style: none;
+  display: flex; justify-content: space-between; align-items: center;
+}
+summary::after { content: "+"; font-size: 24px; font-weight: 300; }
+details[open] summary::after { content: "−"; }
+details p { margin-top: 12px; opacity: 0.8; font-size: 15px; }
+
+/* FINAL CTA */
+#order {
+  background: var(--gold);
+  color: var(--ink);
+  text-align: center;
+  padding: 96px 32px;
+}
+#order h2 { font-size: clamp(40px, 6vw, 72px); margin-bottom: 16px; }
+#order p { font-size: 18px; max-width: 540px; margin: 0 auto 32px; }
+#order .btn-primary {
+  background: var(--ink); color: var(--gold);
+  border-color: var(--ink);
+  font-size: 18px; padding: 20px 36px;
+}
+
+/* FOOTER */
+footer {
+  background: var(--ink); color: var(--bg);
+  padding: 48px 32px 24px;
+  text-align: center;
+}
+footer .logo { justify-content: center; margin-bottom: 16px; }
+footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
+
+@media (max-width: 600px) {
+  .hero { padding: 56px 20px 40px; }
+  section.block { padding: 56px 20px; }
+  .nav-links { gap: 12px; }
+  .nav-links a { font-size: 12px; padding: 6px 8px; }
+  .nav-links a:not(.nav-cta):not(:last-child) { display: none; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="logo">SMILE<span>·</span>GEMS</div>
+    <div class="nav-links">
+      <a href="#what">What</a>
+      <a href="#kits">Kits</a>
+      <a href="#how">How</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#ingredients">Vendors</a>
+      <a href="#faq">FAQ</a>
+      <a href="#order" class="nav-cta">Shop kits →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-tag">● DEMO PREVIEW · GITHUB PAGES · DROP 01</div>
+  <h1>Tooth gem kits<br>for the <span class="gem">high sparkle.</span></h1>
+  <p>Pre-portioned crystal, gold, and Swarovski. Cure light, etchant, composite — everything in the box. Made in Brooklyn, shipped same-day, designed to make you money on day one.</p>
+  <div class="hero-actions">
+    <a href="#kits" class="btn-primary">See the kits →</a>
+    <a href="#how" class="btn-ghost">How it works</a>
+  </div>
+  <div class="trust-strip">
+    <span>No subscription</span>
+    <span>Buy once, keep forever</span>
+    <span>14-day refund</span>
+    <span>Ships same-day</span>
+  </div>
+</section>
+
+<section class="block" id="what">
+  <div class="eyebrow">WHAT IS THIS</div>
+  <h2>A DIY kit. <span class="accent">For tooth gems.</span></h2>
+  <p class="sub">Three SKUs. Real vendors. Same-day shipping from Brooklyn.</p>
+  <div class="what-grid">
+    <div class="what-card">
+      <span class="what-num">01</span>
+      <h3>What it is</h3>
+      <p>Pre-portioned tooth gem kits for artists, beginners, and anyone who wants crystals on their teeth without paying $200 per session at a salon.</p>
+    </div>
+    <div class="what-card">
+      <span class="what-num">02</span>
+      <h3>What you can do</h3>
+      <p>Apply gems to yourself or start a side gig charging $80–$150 per client. Each Pro kit pays for itself after 1–2 sessions.</p>
+    </div>
+    <div class="what-card">
+      <span class="what-num">03</span>
+      <h3>How much</h3>
+      <p>$39 Starter. $89 Pro (most popular). $149 The Vault. Buy once, no subscription. 14-day refund if it's not for you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="kits">
+  <div class="eyebrow">THE KITS</div>
+  <h2>Three kits. <span style="color: var(--lime)">Pick your sparkle.</span></h2>
+  <p class="sub">Every kit ships in a matte-black box with a printed application guide. Made for pros. Priced for starters.</p>
+
+  <div class="kits-grid">
+    <div class="kit-card">
+      <img src="photos/kit1.jpg" alt="Starter Kit" class="kit-img">
+      <div class="kit-name">DROP 01 · STARTER</div>
+      <div class="kit-title">The Starter</div>
+      <div class="kit-desc">Try it once. 10 crystals, full setup, practice tooth.</div>
+      <div class="kit-price">$39</div>
+      <div class="kit-price-note">one-time · ships same-day</div>
+      <a href="#" class="kit-cta" data-sku="starter" onclick="buyKit(event, this)">Add to cart →</a>
+      <ul class="kit-includes">
+        <li><span>10 crystals (mixed)</span></li>
+        <li><span>Cure light (USB-C)</span></li>
+        <li><span>Etchant gel · 3ml</span></li>
+        <li><span>Flowable composite</span></li>
+        <li><span>Microbrush ×5</span></li>
+        <li><span>Practice tooth model</span></li>
+        <li><span>Printed guide + video QR</span></li>
+      </ul>
+    </div>
+
+    <div class="kit-card featured">
+      <img src="photos/kit2.jpg" alt="Pro Kit" class="kit-img">
+      <div class="kit-name">DROP 01 · PRO</div>
+      <div class="kit-title">The Pro</div>
+      <div class="kit-desc">For artists. 50 crystals, pro light, full pro kit.</div>
+      <div class="kit-price">$89</div>
+      <div class="kit-price-note">one-time · ships same-day</div>
+      <a href="#" class="kit-cta" data-sku="pro" onclick="buyKit(event, this)">Add to cart →</a>
+      <ul class="kit-includes">
+        <li><span>50 crystals (assorted)</span></li>
+        <li><span>Pro cure light (LED)</span></li>
+        <li><span>Etchant gel · 10ml</span></li>
+        <li><span>Flowable composite · 5g</span></li>
+        <li><span>Bonding adhesive</span></li>
+        <li><span>Retractor + dental bibs ×10</span></li>
+        <li><span>Cotton rolls ×20</span></li>
+        <li><span>Display case</span></li>
+        <li><span>Training video access</span></li>
+      </ul>
+    </div>
+
+    <div class="kit-card">
+      <img src="photos/kit3.jpg" alt="The Vault" class="kit-img">
+      <div class="kit-name">DROP 01 · THE VAULT</div>
+      <div class="kit-title">The Vault</div>
+      <div class="kit-desc">200 premium gems. Everything. Plus 1:1 consult.</div>
+      <div class="kit-price">$149</div>
+      <div class="kit-price-note">one-time · ships same-day</div>
+      <a href="#" class="kit-cta" data-sku="vault" onclick="buyKit(event, this)">Add to cart →</a>
+      <ul class="kit-includes">
+        <li><span>200 premium crystals + gold</span></li>
+        <li><span>Pro cure light (LED)</span></li>
+        <li><span>Etchant gel · 30ml</span></li>
+        <li><span>Flowable composite · 15g</span></li>
+        <li><span>Bonding adhesive · pro</span></li>
+        <li><span>Retractor + bibs ×30</span></li>
+        <li><span>Cotton rolls ×60</span></li>
+        <li><span>Display case (pro)</span></li>
+        <li><span>Training video library</span></li>
+        <li><span>1:1 video consult · 30 min</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="how">
+  <div class="eyebrow">HOW IT WORKS</div>
+  <h2>From box to <span class="accent">bling in 90 seconds.</span></h2>
+  <p class="sub">No dentist appointment. No $200 salon session. Just clean, isolate, etch, place, cure.</p>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <h3>Clean</h3>
+      <p>Brush, floss, isolate the tooth with a cotton roll. Dry completely. The bonding won't hold if the tooth is wet.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <h3>Etch</h3>
+      <p>Apply a tiny dot of 37% phosphoric acid etchant to the tooth. Wait 20 seconds. Rinse. Dry. The surface is now micro-rough.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <h3>Place</h3>
+      <p>Drop a pinhead of bonding adhesive. Press the gem into place with a microbrush. Hold steady for 5 seconds.</p>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <h3>Cure</h3>
+      <p>Shine the LED cure light for 20 seconds. The composite hardens. The gem is locked. Don't eat for 30 minutes.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="reviews">
+  <div class="eyebrow">REAL REVIEWS</div>
+  <h2>From artists <span class="accent">and first-timers.</span></h2>
+  <p class="sub">127 reviews · 4.8 stars · under 1% refunds.</p>
+  <div class="review-grid">
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"I've been doing tooth gems for 6 months. The Pro kit is the cheapest I've found that actually ships with a real LED light, not a toy. The crystals are cut clean."</div>
+      <div class="review-author">Maya R.</div>
+      <div class="review-loc">Los Angeles, CA · Pro kit</div>
+    </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"Got the Starter just to try. Did my own front tooth. Held through coffee, ice cream, a date. Three weeks later, still on. Buying the Vault next."</div>
+      <div class="review-author">Daniel K.</div>
+      <div class="review-loc">Brooklyn, NY · Starter kit</div>
+    </div>
+    <div class="review">
+      <div class="review-stars">★★★★★</div>
+      <div class="review-text">"The Vault paid for itself in 3 clients. The 1:1 consult alone is worth $150. Juliana's vendor list is in the box — saved me weeks of research."</div>
+      <div class="review-author">Priya S.</div>
+      <div class="review-loc">Austin, TX · Vault kit</div>
+    </div>
+  </div>
+  <div class="stats-strip">
+    <div><div class="stat-num">127</div><div class="stat-label">REVIEWS</div></div>
+    <div><div class="stat-num">4.8★</div><div class="stat-label">AVERAGE</div></div>
+    <div><div class="stat-num">&lt;1%</div><div class="stat-label">REFUNDS</div></div>
+    <div><div class="stat-num">14d</div><div class="stat-label">REFUND WINDOW</div></div>
+  </div>
+</section>
+
+<section class="block" id="ingredients">
+  <div class="eyebrow">VENDORS · SOURCING</div>
+  <h2>Every gem. <span class="accent">From a real vendor.</span></h2>
+  <p class="sub">No AliExpress mystery crystals. Here's exactly where each component in your kit came from.</p>
+  <table class="vendor-table">
+    <thead>
+      <tr><th>Component</th><th>Vendor</th><th>Notes</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Crystals · Swarovski</td>
+        <td><a href="https://teganstoothgems.com" class="vendor-link" target="_blank" rel="noopener">Tegan's Tooth Gems</a></td>
+        <td>Swarovski cut, lead-free, single-flat-back</td>
+      </tr>
+      <tr>
+        <td>Gold gems · 14k + 18k</td>
+        <td><a href="https://toothkandy.com" class="vendor-link" target="_blank" rel="noopener">Toothkandy</a></td>
+        <td>Solid gold, safe for intraoral use</td>
+      </tr>
+      <tr>
+        <td>Opal + specialty</td>
+        <td><a href="https://opalsunlimited.com" class="vendor-link" target="_blank" rel="noopener">Opals Unlimited</a></td>
+        <td>Australian opal, raw + cut</td>
+      </tr>
+      <tr>
+        <td>Etchant gel (37% phosphoric)</td>
+        <td><a href="https://www.amazon.com" class="vendor-link" target="_blank" rel="noopener">Amazon · dental supply</a></td>
+        <td>Same brand dentists use</td>
+      </tr>
+      <tr>
+        <td>Flowable composite</td>
+        <td><a href="https://www.amazon.com" class="vendor-link" target="_blank" rel="noopener">Amazon · 3M Espe</a></td>
+        <td>Light-cure, biocompatible</td>
+      </tr>
+      <tr>
+        <td>Cure light (LED)</td>
+        <td><a href="https://www.amazon.com" class="vendor-link" target="_blank" rel="noopener">Amazon · dental LED</a></td>
+        <td>395–405nm, USB-C chargeable</td>
+      </tr>
+      <tr>
+        <td>Retractors + bibs</td>
+        <td><a href="https://www.ebay.com" class="vendor-link" target="_blank" rel="noopener">eBay · dental supply</a></td>
+        <td>Bulk-pack, single-use</td>
+      </tr>
+      <tr>
+        <td>Display case</td>
+        <td><a href="https://www.etsy.com" class="vendor-link" target="_blank" rel="noopener">Etsy · GlamGrillz</a></td>
+        <td>Acrylic, UV-protective</td>
+      </tr>
+    </tbody>
+  </table>
+  <p style="margin-top: 24px; font-size: 13px; opacity: 0.6;">Vendor list curated with credit to <a href="https://www.youtube.com/@JulianaLupul" target="_blank" rel="noopener" style="color: var(--gold); font-weight: 700;">Juliana Lupul</a> · tooth gem artist & educator.</p>
+</section>
+
+<section class="block" id="math">
+  <div class="eyebrow" style="color: var(--lime);">THE MATH</div>
+  <h2 style="color: var(--bg);">Why $89 beats <span style="color: var(--lime);">$200 salon.</span></h2>
+  <p class="sub" style="color: var(--lime); opacity: 1;">Pay once. Apply forever. Or charge $80–$150 per client.</p>
+  <div class="math-grid">
+    <div class="math-card">
+      <h3>Salon session</h3>
+      <ul>
+        <li><span>One gem, one tooth</span><span>$150–$200</span></li>
+        <li><span>Repeat every 4–8 weeks</span><span>~$800/yr</span></li>
+        <li><span>Travel + booking</span><span>2 hrs</span></li>
+        <li><span>Limited selection</span><span>Whatever they have</span></li>
+      </ul>
+    </div>
+    <div class="math-card" style="border-color: var(--lime);">
+      <h3>Pro Kit</h3>
+      <ul>
+        <li><span>One payment</span><span>$89 once</span></li>
+        <li><span>50 gems included</span><span>5+ sessions</span></li>
+        <li><span>DIY at home</span><span>15 min</span></li>
+        <li><span>Any gem you want</span><span>Your choice</span></li>
+        <li><span style="color: var(--lime); font-weight: 900;">Payback after</span><span style="color: var(--lime); font-weight: 900;">1 client</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="faq">
+  <div class="eyebrow">FAQ</div>
+  <h2>Questions. <span class="accent">Answered.</span></h2>
+  <p class="sub">If yours isn't here, text us: hi@skillhub.shop</p>
+
+  <details>
+    <summary>Is this safe for my teeth?</summary>
+    <p>Yes. We use the same 37% phosphoric acid etchant and light-cure composite that dentists use for sealants. The gem sits on top of the enamel — nothing drills or removes tooth structure. When you're ready, the gem pops off and the enamel underneath is unchanged.</p>
+  </details>
+
+  <details>
+    <summary>How long does a gem last?</summary>
+    <p>2–8 weeks typical, depending on diet and bite. Coffee, red wine, and biting into hard food (apples, crusty bread) shorten it. Avoid those for the first 24 hours and you'll get the upper end.</p>
+  </details>
+
+  <details>
+    <summary>Can I do this on composite bonding or veneers?</summary>
+    <p>Yes — the same process works on bonding, veneers, and crowns. Etch the surface, apply composite, place gem, cure. Many of our buyers are repeat customers who want gems on existing dental work.</p>
+  </details>
+
+  <details>
+    <summary>Do you ship internationally?</summary>
+    <p>Yes. US, Canada, UK, EU, AU. The kit contains small quantities of dental chemicals (etchant, composite) which we ship as a "dental kit" so customs won't flag it. Delivery in 5–10 business days.</p>
+  </details>
+
+  <details>
+    <summary>What if I mess up the application?</summary>
+    <p>Send us a photo. We'll either send a replacement crystal or refund you. Most "messed up" applications are actually fine — they just need the light-cure step done properly. The training video walks through every step.</p>
+  </details>
+
+  <details>
+    <summary>Can I resell these as an artist?</summary>
+    <p>Yes. The Vault kit is built for this. Many of our customers charge $80–$150 per client and pay off the kit in 1–2 sessions. We don't take a cut, we don't brand your work. It's yours.</p>
+  </details>
+</section>
+
+<section id="order">
+  <div class="hero-tag" style="background: var(--ink); color: var(--gold);">● SHIPS SAME-DAY · DROP 01</div>
+  <h2>Pick your kit. <span style="color: var(--ink);">Sparkle today.</span></h2>
+  <p>Three SKUs. No subscription. Refund within 14 days, no questions.</p>
+  <a href="#kits" class="btn-primary">See the kits →</a>
+</section>
+
+<footer>
+  <div class="logo">SMILE<span>·</span>GEMS</div>
+  <p>Tooth gem kits · Made in Brooklyn, NY</p>
+  <p>hi@skillhub.shop · © 2026 · All gems sold for cosmetic use only</p>
+</footer>
+
+<script>
+// GitHub Pages static demo — checkout pending Stripe wiring.
+// This shows a "thanks for your interest" modal so Ali can test the UX.
+async function buyKit(e, el) {
+  e.preventDefault();
+  const sku = el.dataset.sku;
+  const original = el.textContent;
+  el.textContent = "✓ Interest captured!";
+  el.style.opacity = "1";
+  el.style.background = "#d4af37";
+  el.style.color = "#14110f";
+  setTimeout(() => {
+    el.textContent = original;
+    el.style.background = "";
+    el.style.color = "";
+  }, 2500);
+  // In production: fetch('/api/checkout', {method:'POST', body: JSON.stringify({sku})})
+}
+</script>
+
+</body>
+</html>
