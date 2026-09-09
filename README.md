@@ -39,7 +39,7 @@ When Ali is ready to take payments:
 - **Frontend:** same `index.html` (drop-in replace of this demo)
 - **Backend:** `toothgem/api.py` — Python + SQLite, single file
 - **Payments:** Stripe Checkout
-- **Hosting:** `skillhub.shop/toothgem/` ~~(live now)~~ — **CONFLICT: see note below**
+- **Hosting:** GitHub Pages preview (this repo) â€” production hosting TBD after checkout wiring
 - **Domain:** will migrate to `pretty-stoned.com` when ready
 
 ## Source / inspiration
@@ -51,7 +51,7 @@ When Ali is ready to take payments:
 
 - **Client:** Ali (boss's friend)
 - **Brand:** Pretty Stoned
-- **Status:** Live preview at GitHub Pages, backend pending Stripe setup — **CONFLICT: see note below**
+- **Status:** Live preview at GitHub Pages (matches the `preview--demo` badge), backend pending Stripe setup
 - **Reusable patterns:** every feature shipped here is documented in the SkillHub agents/skills catalog
 
 ---
