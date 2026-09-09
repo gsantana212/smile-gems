@@ -5,10 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SMILE GEMS · Tooth Gem DIY Kits</title>
 <meta name="description" content="Tooth gem kits for artists and beginners. Crystal, gold, and Swarovski. Buy once, no subscription. From $39.">
+<meta name="theme-color" content="#d4af37">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:title" content="SMILE GEMS · Tooth Gem DIY Kits">
 <meta property="og:description" content="Pre-portioned gem kits. Cure light, etchant, composite — everything you need. From $39.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="https://gsantana212.github.io/smile-gems/photos/hero.jpg">
+<meta property="og:url" content="https://gsantana212.github.io/smile-gems/">
 <link rel="canonical" href="https://gsantana212.github.io/smile-gems/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%2314110f'/%3E%3Cpath d='M32 12 L48 28 L40 52 L24 52 L16 28 Z' fill='%23d4af37'/%3E%3Cpath d='M32 12 L48 28 L40 52 L32 48 Z' fill='%23ffb8d1' opacity='0.85'/%3E%3Cpath d='M32 12 L16 28 L24 52 L32 48 Z' fill='%23b8e0ff' opacity='0.7'/%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Product","name":"SMILE GEMS Tooth Gem Kit","description":"DIY tooth gem kits with crystal, gold, and Swarovski. Cure light, etchant, composite included.","brand":{"@type":"Brand","name":"SMILE GEMS"},"offers":[{"@type":"Offer","name":"The Starter","price":"39","priceCurrency":"USD"},{"@type":"Offer","name":"The Pro","price":"89","priceCurrency":"USD"},{"@type":"Offer","name":"The Vault","price":"149","priceCurrency":"USD"}]}
+</script>
 <style>
 :root {
   --bg: #f6f1e9;
@@ -389,6 +397,102 @@ footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
   .nav-links a { font-size: 12px; padding: 6px 8px; }
   .nav-links a:not(.nav-cta):not(:last-child) { display: none; }
 }
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-top: 40px;
+}
+.gallery-item {
+  aspect-ratio: 1; overflow: hidden;
+  border-radius: 16px; cursor: zoom-in;
+  border: 1.5px solid var(--line);
+  background: white;
+}
+.gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+.gallery-item:hover img { transform: scale(1.05); }
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(20,17,15,0.92);
+  display: none; align-items: center; justify-content: center;
+  padding: 32px; cursor: zoom-out;
+}
+.lightbox.open { display: flex; }
+.lightbox img {
+  max-width: 90vw; max-height: 90vh;
+  border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox-close {
+  position: absolute; top: 24px; right: 32px;
+  color: white; font-size: 32px; font-weight: 300;
+  cursor: pointer; line-height: 1; background: none; border: none;
+}
+
+/* ORDER MODAL */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 300;
+  background: rgba(20,17,15,0.85);
+  display: none; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.modal-overlay.open { display: flex; }
+.modal {
+  background: var(--bg);
+  color: var(--ink);
+  border-radius: 24px;
+  max-width: 480px; width: 100%;
+  padding: 40px 32px 32px;
+  position: relative;
+  max-height: 90vh; overflow-y: auto;
+}
+.modal h3 { font-size: 24px; font-weight: 900; margin-bottom: 8px; letter-spacing: -0.02em; }
+.modal .modal-sub { font-size: 14px; opacity: 0.7; margin-bottom: 24px; }
+.modal label {
+  display: block; font-size: 12px; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  margin-bottom: 6px; opacity: 0.7;
+}
+.modal input, .modal select, .modal textarea {
+  width: 100%; padding: 12px 14px;
+  border: 1.5px solid var(--line);
+  border-radius: 12px; font-size: 15px;
+  background: white; font-family: inherit;
+  margin-bottom: 16px;
+}
+.modal input:focus, .modal select:focus, .modal textarea:focus {
+  outline: none; border-color: var(--gold);
+}
+.modal .modal-actions {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 8px;
+}
+.modal .modal-actions button {
+  flex: 1; min-width: 140px;
+  padding: 14px 20px; border-radius: 999px;
+  font-weight: 700; font-size: 15px;
+  cursor: pointer; border: 2px solid var(--ink);
+  font-family: inherit;
+}
+.modal .btn-mailto { background: var(--ink); color: var(--bg); }
+.modal .btn-mailto:hover { background: var(--gold); color: var(--ink); border-color: var(--gold); }
+.modal .btn-copy { background: white; color: var(--ink); }
+.modal .btn-copy:hover { background: var(--ice); }
+.modal .modal-close {
+  position: absolute; top: 16px; right: 20px;
+  background: none; border: none;
+  font-size: 28px; line-height: 1; cursor: pointer;
+  opacity: 0.5;
+}
+.modal .modal-close:hover { opacity: 1; }
+.modal .success-msg {
+  background: var(--lime); padding: 16px;
+  border-radius: 12px; font-size: 14px;
+  font-weight: 600; margin-top: 12px; display: none;
+}
+.modal .success-msg.show { display: block; }
 </style>
 </head>
 <body>
@@ -401,6 +505,7 @@ footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
       <a href="#kits">Kits</a>
       <a href="#how">How</a>
       <a href="#reviews">Reviews</a>
+      <a href="#gallery">Gallery</a>
       <a href="#ingredients">Vendors</a>
       <a href="#faq">FAQ</a>
       <a href="#order" class="nav-cta">Shop kits →</a>
@@ -658,6 +763,20 @@ footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
   </div>
 </section>
 
+<section class="block" id="gallery">
+  <div class="eyebrow">GALLERY</div>
+  <h2>Look at the <span class="accent">sparkle.</span></h2>
+  <p class="sub">Tap any image for full size.</p>
+  <div class="gallery">
+    <div class="gallery-item" onclick="openLightbox('photos/hero.jpg')"><img src="photos/hero.jpg" alt="Tooth gem application close-up" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('photos/kit4.jpg')"><img src="photos/kit4.jpg" alt="Kit contents flat lay" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('photos/kit5.jpg')"><img src="photos/kit5.jpg" alt="Crystals in case" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('photos/kit6.jpg')"><img src="photos/kit6.jpg" alt="Cure light detail" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('photos/kit7.jpg')"><img src="photos/kit7.jpg" alt="Applied gem smile" loading="lazy"></div>
+    <div class="gallery-item" onclick="openLightbox('photos/kit8.jpg')"><img src="photos/kit8.jpg" alt="Gem collection" loading="lazy"></div>
+  </div>
+</section>
+
 <section class="block" id="faq">
   <div class="eyebrow">FAQ</div>
   <h2>Questions. <span class="accent">Answered.</span></h2>
@@ -698,7 +817,10 @@ footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
   <div class="hero-tag" style="background: var(--ink); color: var(--gold);">● SHIPS SAME-DAY · DROP 01</div>
   <h2>Pick your kit. <span style="color: var(--ink);">Sparkle today.</span></h2>
   <p>Three SKUs. No subscription. Refund within 14 days, no questions.</p>
-  <a href="#kits" class="btn-primary">See the kits →</a>
+  <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+    <a href="#kits" class="btn-primary">See the kits →</a>
+    <a href="#" class="btn-ghost" style="background: var(--ink); color: var(--gold); border-color: var(--ink);" onclick="openOrderModal('pro'); return false;">Order the Pro →</a>
+  </div>
 </section>
 
 <footer>
@@ -707,24 +829,120 @@ footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
   <p>hi@skillhub.shop · © 2026 · All gems sold for cosmetic use only</p>
 </footer>
 
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" aria-label="Close">×</button>
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<div class="modal-overlay" id="order-modal" onclick="if(event.target===this)closeOrderModal()">
+  <div class="modal">
+    <button class="modal-close" onclick="closeOrderModal()" aria-label="Close">×</button>
+    <h3>Place your order</h3>
+    <p class="modal-sub">Pick a kit, drop your email, and we'll send a Stripe checkout link same-day. No subscription.</p>
+
+    <label for="order-sku">Kit</label>
+    <select id="order-sku">
+      <option value="The Starter · $39">The Starter — $39</option>
+      <option value="The Pro · $89" selected>The Pro — $89 (most popular)</option>
+      <option value="The Vault · $149">The Vault — $149</option>
+    </select>
+
+    <label for="order-name">Name</label>
+    <input id="order-name" type="text" placeholder="Alex Rivera" required>
+
+    <label for="order-email">Email</label>
+    <input id="order-email" type="email" placeholder="you@domain.com" required>
+
+    <label for="order-notes">Notes (optional)</label>
+    <textarea id="order-notes" rows="2" placeholder="Gift message, shipping preference, etc."></textarea>
+
+    <div class="modal-actions">
+      <button class="btn-mailto" onclick="submitOrder('mailto')">Email order →</button>
+      <button class="btn-copy" onclick="submitOrder('copy')">Copy to clipboard</button>
+    </div>
+
+    <div class="success-msg" id="order-success"></div>
+  </div>
+</div>
+
 <script>
-// GitHub Pages static demo — checkout pending Stripe wiring.
-// This shows a "thanks for your interest" modal so Ali can test the UX.
+// Lightbox
+function openLightbox(src) {
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeLightbox(); closeOrderModal(); }
+});
+
+// Order modal
+function openOrderModal(presetSku) {
+  if (presetSku) {
+    const map = { starter: 'The Starter · $39', pro: 'The Pro · $89', vault: 'The Vault · $149' };
+    const sel = document.getElementById('order-sku');
+    const opt = Array.from(sel.options).find(o => o.value.startsWith(map[presetSku]?.split(' · ')[0]));
+    if (opt) sel.value = opt.value;
+  }
+  document.getElementById('order-modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('order-name').focus(), 100);
+}
+function closeOrderModal() {
+  document.getElementById('order-modal').classList.remove('open');
+  document.body.style.overflow = '';
+  document.getElementById('order-success').classList.remove('show');
+  document.getElementById('order-success').textContent = '';
+}
+
+function buildOrderText() {
+  const sku = document.getElementById('order-sku').value;
+  const name = document.getElementById('order-name').value.trim() || '(no name)';
+  const email = document.getElementById('order-email').value.trim() || '(no email)';
+  const notes = document.getElementById('order-notes').value.trim();
+  const ts = new Date().toISOString().slice(0, 19).replace('T', ' ');
+  return [
+    `SMILE GEMS — Order Interest`,
+    `Timestamp: ${ts}`,
+    `Kit: ${sku}`,
+    `Name: ${name}`,
+    `Email: ${email}`,
+    notes ? `Notes: ${notes}` : null,
+  ].filter(Boolean).join('\n');
+}
+
+function submitOrder(mode) {
+  const sku = document.getElementById('order-sku').value;
+  if (mode === 'mailto' && !document.getElementById('order-email').value.trim()) {
+    document.getElementById('order-email').focus();
+    return;
+  }
+  const body = buildOrderText();
+  const subject = encodeURIComponent(`SMILE GEMS order — ${sku}`);
+  const ok = document.getElementById('order-success');
+  if (mode === 'mailto') {
+    window.location.href = `mailto:hi@skillhub.shop?subject=${subject}&body=${encodeURIComponent(body)}`;
+    ok.textContent = 'Opening your mail app — press Send to complete.';
+  } else {
+    navigator.clipboard.writeText(body).then(
+      () => { ok.textContent = 'Copied. Email hi@skillhub.shop with this order.'; },
+      () => { ok.textContent = 'Copy failed. Long-press the form to select manually.'; }
+    );
+  }
+  ok.classList.add('show');
+}
+
+// Kit "Add to cart" CTA — opens modal with SKU preset
 async function buyKit(e, el) {
   e.preventDefault();
-  const sku = el.dataset.sku;
-  const original = el.textContent;
-  el.textContent = "✓ Interest captured!";
-  el.style.opacity = "1";
-  el.style.background = "#d4af37";
-  el.style.color = "#14110f";
-  setTimeout(() => {
-    el.textContent = original;
-    el.style.background = "";
-    el.style.color = "";
-  }, 2500);
-  // In production: fetch('/api/checkout', {method:'POST', body: JSON.stringify({sku})})
+  openOrderModal(el.dataset.sku);
 }
+
+// Hero CTA scrolls to kits
 </script>
 
 </body>
