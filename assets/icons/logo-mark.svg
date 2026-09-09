@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6f1e9"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+    <linearGradient id="blush" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffd9e6"/>
+      <stop offset="100%" stop-color="#ffb8d1"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="#14110f"/>
+  <circle cx="96" cy="104" r="5" fill="#d4af37" opacity="0.55"/>
+  <circle cx="428" cy="140" r="4" fill="#ffb8d1" opacity="0.5"/>
+  <circle cx="404" cy="392" r="5" fill="#d4af37" opacity="0.45"/>
+  <circle cx="112" cy="396" r="3.5" fill="#ffb8d1" opacity="0.45"/>
+  <path fill="url(#gold2)" d="M256 116c-64 0-108 42-108 100 0 34 10 56 20 88 8 26 14 52 20 78 5 22 12 44 26 44 16 0 20-20 24-46 3-19 8-40 18-40s21 21 24 40c4 26 8 46 24 46 14 0 21-22 26-44 6-26 12-52 20-78 10-32 20-58 20-92 0-58-44-100-108-100z"/>
+  <g transform="translate(256 210)">
+    <polygon points="0,-46 40,-14 25,42 -25,42 -40,-14" fill="url(#blush)" stroke="#d4af37" stroke-width="7" stroke-linejoin="round"/>
+    <line x1="0" y1="-46" x2="0" y2="42" stroke="#d4af37" stroke-width="4" opacity="0.8"/>
+    <line x1="-40" y1="-14" x2="40" y2="-14" stroke="#d4af37" stroke-width="4" opacity="0.8"/>
+    <line x1="0" y1="-46" x2="-25" y2="42" stroke="#d4af37" stroke-width="2.5" opacity="0.6"/>
+    <line x1="0" y1="-46" x2="25" y2="42" stroke="#d4af37" stroke-width="2.5" opacity="0.6"/>
+  </g>
+  <path d="M320 150l6 18 18 6-18 6-6 18-6-18-18-6 18-6z" fill="#fff" opacity="0.9"/>
+</svg>
