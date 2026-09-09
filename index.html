@@ -18,19 +18,44 @@
 </script>
 <style>
 :root {
-  --bg: #f6f1e9;
-  --ink: #14110f;
+  --bg: #0a0618;
+  --ink: #f6f1e9;
   --lime: #d4ff3a;
-  --pink: #ffb8d1;
-  --ice: #b8e0ff;
+  --pink: #ff8ecb;
+  --ice: #b8a0ff;
   --gold: #d4af37;
-  --line: #14110f22;
+  --line: #ffffff26;
+  --navy: #131036;
+  --purple: #6d28d9;
+  --pink2: #ec4899;
+}
+body {
+  background: linear-gradient(135deg, #131036 0%, #2a1060 25%, #6d28d9 55%, #be185d 75%, #131036 100%);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+}
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+/* animated sparkling background */
+.sparkle-layer {
+  position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;
+}
+.sparkle-layer span {
+  position: absolute; display: block; border-radius: 50%;
+  background: #fff; opacity: 0; animation: sparkle 6s linear infinite;
+}
+@keyframes sparkle {
+  0%, 100% { opacity: 0; transform: scale(0.4); }
+  50% { opacity: 0.9; transform: scale(1.2); }
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background: var(--bg);
+  background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
   color: var(--ink);
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
@@ -41,7 +66,7 @@ img { max-width: 100%; display: block; }
 /* NAV */
 nav {
   position: sticky; top: 0; z-index: 100;
-  background: var(--bg);
+  background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
   padding: 16px 32px;
 }
@@ -59,8 +84,8 @@ nav {
   padding: 8px 12px; border-radius: 8px;
   transition: background 0.15s;
 }
-.nav-links a:hover { background: var(--ink); color: var(--bg); }
-.nav-cta { background: var(--ink); color: var(--bg) !important; }
+.nav-links a:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.nav-cta { background: linear-gradient(90deg,#6d28d9,#ec4899); color: #fff !important; }
 .nav-cta:hover { background: var(--gold); color: var(--ink) !important; }
 
 /* HERO */
@@ -146,7 +171,7 @@ h2 .accent { color: var(--gold); }
 }
 
 /* WHAT IS THIS */
-#what { background: var(--bg); }
+#what { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); }
 .what-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -181,7 +206,7 @@ h2 .accent { color: var(--gold); }
   margin-top: 48px;
 }
 .kit-card {
-  background: var(--bg);
+  background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
   color: var(--ink);
   border-radius: 24px;
   padding: 32px;
@@ -245,7 +270,7 @@ h2 .accent { color: var(--gold); }
 .kit-includes li::before { content: "• "; color: var(--gold); font-weight: 700; }
 
 /* HOW IT WORKS */
-#how { background: var(--bg); }
+#how { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); }
 .steps {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -281,7 +306,7 @@ h2 .accent { color: var(--gold); }
   margin-top: 40px;
 }
 .review {
-  background: var(--bg);
+  background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
   border-radius: 20px;
   padding: 28px;
   border: 1.5px solid var(--line);
@@ -302,7 +327,7 @@ h2 .accent { color: var(--gold); }
 .stat-label { font-size: 12px; opacity: 0.6; letter-spacing: 0.06em; }
 
 /* INGREDIENTS (vendor list) */
-#ingredients { background: var(--bg); }
+#ingredients { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); }
 .vendor-table {
   width: 100%;
   border-collapse: collapse;
@@ -347,7 +372,7 @@ h2 .accent { color: var(--gold); }
 .math-card li { padding: 8px 0; display: flex; justify-content: space-between; }
 .math-card li span:last-child { font-weight: 900; }
 
-#faq { background: var(--bg); }
+#faq { background: rgba(255,255,255,0.06); backdrop-filter: blur(10px); }
 details {
   background: white;
   border-radius: 16px;
@@ -440,7 +465,7 @@ footer p { font-size: 13px; opacity: 0.6; margin-bottom: 8px; }
 }
 .modal-overlay.open { display: flex; }
 .modal {
-  background: var(--bg);
+  background: rgba(255,255,255,0.06); backdrop-filter: blur(10px);
   color: var(--ink);
   border-radius: 24px;
   max-width: 480px; width: 100%;
@@ -969,5 +994,5 @@ async function buyKit(e, el) {
 // Hero CTA scrolls to kits
 </script>
 
-</body>
+<div class="sparkle-layer"><span style="left:0%;top:0%;width:2px;height:2px;animation-delay:0s"></span><span style="left:37%;top:53%;width:3px;height:3px;animation-delay:1s"></span><span style="left:74%;top:6%;width:4px;height:4px;animation-delay:2s"></span><span style="left:11%;top:59%;width:5px;height:5px;animation-delay:3s"></span><span style="left:48%;top:12%;width:2px;height:2px;animation-delay:4s"></span><span style="left:85%;top:65%;width:3px;height:3px;animation-delay:5s"></span><span style="left:22%;top:18%;width:4px;height:4px;animation-delay:6s"></span><span style="left:59%;top:71%;width:5px;height:5px;animation-delay:7s"></span><span style="left:96%;top:24%;width:2px;height:2px;animation-delay:8s"></span><span style="left:33%;top:77%;width:3px;height:3px;animation-delay:9s"></span><span style="left:70%;top:30%;width:4px;height:4px;animation-delay:10s"></span><span style="left:7%;top:83%;width:5px;height:5px;animation-delay:11s"></span><span style="left:44%;top:36%;width:2px;height:2px;animation-delay:0s"></span><span style="left:81%;top:89%;width:3px;height:3px;animation-delay:1s"></span><span style="left:18%;top:42%;width:4px;height:4px;animation-delay:2s"></span><span style="left:55%;top:95%;width:5px;height:5px;animation-delay:3s"></span><span style="left:92%;top:48%;width:2px;height:2px;animation-delay:4s"></span><span style="left:29%;top:1%;width:3px;height:3px;animation-delay:5s"></span><span style="left:66%;top:54%;width:4px;height:4px;animation-delay:6s"></span><span style="left:3%;top:7%;width:5px;height:5px;animation-delay:7s"></span><span style="left:40%;top:60%;width:2px;height:2px;animation-delay:8s"></span><span style="left:77%;top:13%;width:3px;height:3px;animation-delay:9s"></span><span style="left:14%;top:66%;width:4px;height:4px;animation-delay:10s"></span><span style="left:51%;top:19%;width:5px;height:5px;animation-delay:11s"></span></div></body>
 </html>
