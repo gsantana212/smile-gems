@@ -932,6 +932,22 @@ function submitOrder(mode) {
   const body = buildOrderText();
   const subject = encodeURIComponent(`SMILE GEMS order — ${sku}`);
   const ok = document.getElementById('order-success');
+  // ponytail: best-effort POST to the Ada webhook-router pre-Stripe intake.
+  // If the router is down (static preview), fall back to mailto/copy silently.
+  const skuKey = (sku.split(' · ')[0] || '').toLowerCase().replace('the ', '').trim();
+  const payload = {
+    sku: skuKey,
+    name: document.getElementById('order-name').value.trim(),
+    email: document.getElementById('order-email').value.trim(),
+    notes: document.getElementById('order-notes').value.trim(),
+    source: 'smile-gems',
+  };
+  fetch('https://router.skillhub.shop/orders', {
+    method: 'POST',
+    mode: 'no-cors',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(payload),
+  }).catch(() => {});
   if (mode === 'mailto') {
     window.location.href = `mailto:hi@skillhub.shop?subject=${subject}&body=${encodeURIComponent(body)}`;
     ok.textContent = 'Opening your mail app — press Send to complete.';
