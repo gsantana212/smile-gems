@@ -13,7 +13,7 @@ A 3-SKU e-commerce site for Ali (Pretty Stoned) — pre-portioned tooth gem kits
 
 - **Repo state:** single-commit preview, untouched since 2026-06-27
 - **Where it runs:** `gsantana212.github.io/smile-gems/` — GitHub Pages preview only
-- **Production site (separate, private repo):** `https://skillhub.shop/toothgem/`
+- **Production:** pending â€” checkout wiring blocked on Stripe API key from client (Ali)
 - **Backend:** pending — Stripe API key still needs to be delivered by Ali
 - **Takeaway for clients:** what you see on the GitHub Pages link is the
   design preview; the live checkout is wired separately at the production URL.

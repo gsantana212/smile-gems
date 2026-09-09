@@ -6,7 +6,7 @@ If you discover a security vulnerability in this site or its underlying code,
 please report it privately to the project owner. **Do not file a public GitHub
 issue for security problems.**
 
-- **Email:** security@pretty-stoned.com
+- **Email:** GitHub private vulnerability reporting (Security tab â†’ Report a vulnerability)
 - **Response window:** within 7 business days
 - **Encrypted reports:** PGP key available on request
 
